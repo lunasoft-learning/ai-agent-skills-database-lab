@@ -1,0 +1,16 @@
+# Entornos y credenciales
+.env
+*.local
+
+# Datos de Docker
+mssql-data/
+
+# Temporales de sistema
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# Salidas generadas durante el curso
+data-dictionary.md
+analysis.json

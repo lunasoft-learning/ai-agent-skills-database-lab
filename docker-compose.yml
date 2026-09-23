@@ -1,0 +1,38 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_agent_lab
+    platform: linux/amd64
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SecretPassword123!
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+
+  db-init:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_init_lab
+    platform: linux/amd64
+    depends_on:
+      - sqlserver
+    restart: "no"
+    volumes:
+      - ./database:/database:ro
+    entrypoint: >
+      /bin/bash -c "
+      echo 'Esperando a que SQL Server esté listo...';
+      for i in {1..60}; do
+        /opt/mssql-tools18/bin/sqlcmd -S sqlserver -U sa -P 'SecretPassword123!' -C -Q 'SELECT 1' &>/dev/null && break;
+        sleep 2;
+      done;
+      echo 'Inicializando AdventureWorksLT en SQL Server...';
+      /opt/mssql-tools18/bin/sqlcmd -S sqlserver -U sa -P 'SecretPassword123!' -C -i /database/init-adventureworkslt.sql;
+      echo 'Base de datos AdventureWorksLT inicializada con éxito.';
+      "
+
+volumes:
+  mssql-data:

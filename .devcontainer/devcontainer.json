@@ -1,0 +1,17 @@
+{
+  "name": "SQL Server & AI Agent Skills Lab",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "sqlserver",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [1433],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-mssql.mssql",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
