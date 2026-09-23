@@ -1,6 +1,6 @@
 # Laboratorio Práctico: AI Agent Skills para Bases de Datos 🚀
 
-Bienvenido al repositorio oficial del curso de LinkedIn Learning **AI agent skills para bases de datos (Curso 4679019)** impartido por **Juanjo Luna**.
+Bienvenido al repositorio oficial del curso de LinkedIn Learning **AI agent skills para bases de datos** impartido por **Juanjo Luna**.
 
 Este proyecto contiene un laboratorio de pruebas completamente aislado con **Microsoft SQL Server 2022** y la base de datos oficial **AdventureWorksLT**, preparado para que aprendas paso a paso a utilizar, crear y orquestar **Agent Skills** con Visual Studio Code y GitHub Copilot.
 
