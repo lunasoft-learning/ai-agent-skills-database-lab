@@ -1,0 +1,26 @@
+# ==============================================================================
+# Cadena de conexión a Microsoft SQL Server (Laboratorio Docker)
+# Curso: AI agent skills para bases de datos — Juanjo Luna
+# ==============================================================================
+
+# Cadena de conexión completa (extensión mssql en VS Code, DBeaver, Azure Data Studio):
+Server=localhost,1433;Database=AdventureWorksLT;User Id=sa;Password=SecretPassword123!;Encrypt=false;TrustServerCertificate=true;
+
+# ------------------------------------------------------------------------------
+# Parámetros de conexión desglosados:
+# ------------------------------------------------------------------------------
+Servidor / Host:    localhost,1433
+Base de datos:      AdventureWorksLT
+Autenticación:      SQL Server Authentication
+Usuario:            sa
+Contraseña:         SecretPassword123!
+Seguridad TLS:      Encrypt=false; TrustServerCertificate=true
+
+# ------------------------------------------------------------------------------
+# Instrucciones de conexión rápida en Visual Studio Code:
+# 1. Asegúrate de tener levantado el contenedor con 'docker compose up -d'.
+# 2. Haz clic en el icono de SQL Server en la barra lateral izquierda (extensión mssql).
+# 3. Haz clic en el botón '+' (Add Connection).
+# 4. Pega la cadena de conexión completa de arriba en la caja superior.
+# 5. Pulsa Intro dos veces para aceptar y conectar de inmediato.
+# ==============================================================================
