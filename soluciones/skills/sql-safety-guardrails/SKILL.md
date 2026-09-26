@@ -1,7 +1,7 @@
 ---
 name: sql-safety-guardrails
 description: Filtro de seguridad e inspección preventiva que valida sentencias T-SQL antes de su ejecución en Microsoft SQL Server, bloqueando operaciones UPDATE y DELETE sin cláusula WHERE, controlando comandos DDL destructivos y forzando límites de lectura TOP en consultas masivas.
-argument-hint: [sentencia T-SQL a validar]
+argument-hint: "sentencia T-SQL a validar"
 ---
 
 # Guardarraíles de Seguridad T-SQL (SQL Server)
