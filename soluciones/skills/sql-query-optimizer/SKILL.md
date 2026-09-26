@@ -1,7 +1,7 @@
 ---
-name: sql-query-optimizer
-description: Analiza el rendimiento de consultas T-SQL lentas en Microsoft SQL Server mediante planes de ejecución y estadísticas de E/S y tiempo, diagnostica escaneos de tabla o índice innecesarios y propone optimizaciones de sintaxis e índices no agrupados recomendados.
-argument-hint: [consulta T-SQL a optimizar]
+name: "sql-query-optimizer"
+description: "Analiza el rendimiento de consultas T-SQL lentas en Microsoft SQL Server mediante planes de ejecución y estadísticas de E/S y tiempo, diagnostica escaneos de tabla o índice innecesarios y propone optimizaciones de sintaxis e índices no agrupados recomendados."
+argument-hint: "consulta T-SQL a optimizar"
 ---
 
 # Optimizador de Consultas T-SQL (SQL Server)
