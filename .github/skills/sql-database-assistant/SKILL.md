@@ -1,7 +1,7 @@
 ---
 name: "sql-database-assistant"
 description: "Use when the user asks to write SQL queries, explore database schemas, inspect table structures, or generate migration and documentation scripts for SQL Server, PostgreSQL, or MySQL."
-argument-hint: [consulta SQL o nombre de tabla a inspeccionar]
+argument-hint: "consulta SQL o nombre de tabla a inspeccionar"
 ---
 
 # SQL Database Assistant
