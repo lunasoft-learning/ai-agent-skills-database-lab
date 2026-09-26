@@ -1,7 +1,7 @@
 ---
 name: db-schema-documenter
 description: Inspecciona el esquema de una base de datos en Microsoft SQL Server (tablas, columnas, restricciones, claves foráneas) y genera automáticamente un diccionario de datos en Markdown con diagramas entidad-relación visuales en Mermaid.
-argument-hint: "nombre de la tabla o esquema opcional"
+argument-hint: [nombre de la tabla o esquema opcional]
 ---
 
 # Documentador de Esquemas (SQL Server)

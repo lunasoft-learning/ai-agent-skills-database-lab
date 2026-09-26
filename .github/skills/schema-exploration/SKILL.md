@@ -5,24 +5,127 @@ description: Lists tables, describes columns and data types, identifies foreign 
 
 # Schema Exploration Skill
 
-Habilidad comunitaria para la introspección y exploración de esquemas relacionales, originaria de `langchain-ai/deepagents`.
+## Workflow
 
-## Capacidades
+### 1. List All Tables
+Use `sql_db_list_tables` tool to see all available tables in the database.
 
-1. **Listar tablas**: Inspecciona las tablas base disponibles en el catálogo de la base de datos (`INFORMATION_SCHEMA.TABLES` o `sys.tables`).
-2. **Describir estructura**: Extrae columnas, tipos de datos, nulabilidad y restricciones de clave primaria (`sys.columns`, `sys.types`).
-3. **Mapear relaciones**: Identifica claves foráneas (`foreign keys`) y relaciones entre entidades para generar consultas SQL precisas y diagramas ERD.
+This returns the complete list of tables you can query.
 
-## Directivas para el Agente
+### 2. Get Schema for Specific Tables
+Use `sql_db_schema` tool with table names to examine:
+- **Column names** - What fields are available
+- **Data types** - INTEGER, TEXT, DATETIME, etc.
+- **Sample data** - 3 example rows to understand content
+- **Primary keys** - Unique identifiers for rows
+- **Foreign keys** - Relationships to other tables
 
-- **Estrategia Explore-First**: Antes de redactar o ejecutar cualquier consulta SQL, comprueba siempre la existencia real de las tablas y sus relaciones en el esquema.
-- **Evitar alucinaciones**: No asumas nombres de columnas o claves de unión sin haber consultado previamente el catálogo de metadatos.
-- **Soporte de dialectos**: Compatible con Microsoft SQL Server (T-SQL), PostgreSQL y MySQL.
+### 3. Map Relationships
+Identify how tables connect:
+- Look for columns ending in "Id" (e.g., CustomerId, ArtistId)
+- Foreign keys link to primary keys in other tables
+- Document parent-child relationships
 
-## Conexión y Parámetros
+### 4. Answer the Question
+Provide clear information about:
+- Available tables and their purpose
+- Column names and what they contain
+- How tables relate to each other
+- Sample data to illustrate content
 
-Cuando interactúes con la base de datos local en Docker, utiliza los parámetros definidos en el entorno:
-- **Host**: `localhost`
-- **Puerto**: `1433`
-- **Usuario**: `sa`
-- **Base de datos**: `AdventureWorksLT`
+## Example: "What tables are available?"
+
+**Step 1:** Use `sql_db_list_tables`
+
+**Response:**
+```
+The Chinook database has 11 tables:
+1. Artist - Music artists
+2. Album - Music albums
+3. Track - Individual songs
+4. Genre - Music genres
+5. MediaType - File formats (MP3, AAC, etc.)
+6. Playlist - User-created playlists
+7. PlaylistTrack - Tracks in playlists
+8. Customer - Store customers
+9. Employee - Store employees
+10. Invoice - Customer purchases
+11. InvoiceLine - Individual items in invoices
+```
+
+## Example: "What columns does the Customer table have?"
+
+**Step 1:** Use `sql_db_schema` with table name "Customer"
+
+**Response:**
+```
+The Customer table has these columns:
+
+- CustomerId (INTEGER) - Primary key, unique customer ID
+- FirstName (NVARCHAR) - Customer's first name
+- LastName (NVARCHAR) - Customer's last name
+- Company (NVARCHAR) - Company name (optional)
+- Address, City, State, Country, PostalCode - Location fields
+- Phone (NVARCHAR) - Phone number
+- Fax (NVARCHAR) - Fax number
+- Email (NVARCHAR) - Email address
+- SupportRepId (INTEGER) - Foreign key to Employee table
+
+Sample data shows customers like:
+- Luís Gonçalves from Brazil
+- Leonie Köhler from Germany
+- François Tremblay from Canada
+```
+
+## Example: "How do I find revenue by artist?"
+
+**Step 1:** Identify tables needed
+- Artist (has artist names)
+- Album (links artists to tracks)
+- Track (links albums to sales)
+- InvoiceLine (has sales data)
+- Invoice (has revenue totals)
+
+**Step 2:** Map relationships
+```
+Artist (ArtistId)
+  ↓ 1:many
+Album (ArtistId, AlbumId)
+  ↓ 1:many
+Track (AlbumId, TrackId)
+  ↓ 1:many
+InvoiceLine (TrackId, UnitPrice, Quantity)
+```
+
+**Response:**
+```
+To find revenue by artist, you'll need to:
+1. Start with the Artist table
+2. JOIN to Album on ArtistId
+3. JOIN to Track on AlbumId
+4. JOIN to InvoiceLine on TrackId
+5. SUM the revenue (UnitPrice * Quantity)
+6. GROUP BY artist name
+
+This requires the query-writing skill to execute.
+```
+
+## Quality Guidelines
+
+**For "list tables" questions:**
+- Show all table names
+- Add brief descriptions of what each contains
+- Group related tables (e.g., music catalog, transactions, people)
+
+**For "describe table" questions:**
+- List all columns with data types
+- Explain what each column contains
+- Show sample data for context
+- Note primary and foreign keys
+- Explain relationships to other tables
+
+**For "how do I query X" questions:**
+- Identify required tables
+- Map the JOIN path
+- Explain the relationship chain
+- Suggest next steps (use query-writing skill)
