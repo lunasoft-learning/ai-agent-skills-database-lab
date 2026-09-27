@@ -29,5 +29,6 @@ Utiliza este procedimiento para generar o actualizar la documentación técnica 
          PRODUCT_CATEGORY ||--o{ PRODUCT : "clasifica"
      ```
 
-4. **Guardado**:
+4. **Guardado y Creación de Documentación**:
    - Escribe o actualiza el resultado en el archivo `data-dictionary.md` en la raíz del proyecto.
+   - Si `data-dictionary.md` no existe previamente en el workspace, debes crearlo desde cero con la estructura completa del modelo y el diagrama Mermaid. Nunca te limites a documentar dentro de los scripts `.sql`.
