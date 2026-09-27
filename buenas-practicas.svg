@@ -331,8 +331,8 @@
   <g transform="translate(960, 1025)" text-anchor="middle">
     <line x1="-900" y1="-15" x2="900" y2="-15" stroke="#1e293b" stroke-width="1"/>
     <text x="0" y="10" fill="#64748b" font-size="14" font-weight="500">
-      Curso: <tspan fill="#94a3b8" font-weight="600">AI agent skills para bases de datos</tspan> &nbsp;•&nbsp; 
-      Instructor: <tspan fill="#94a3b8" font-weight="600">Juanjo Luna</tspan> &nbsp;•&nbsp; 
+      Curso: <tspan fill="#94a3b8" font-weight="600">AI agent skills para bases de datos</tspan>  •  
+      Instructor: <tspan fill="#94a3b8" font-weight="600">Juanjo Luna</tspan>  •  
       Repositorio: <tspan fill="#38bdf8" font-weight="600">github.com/lunasoft-learning/ai-agent-skills-database-lab</tspan>
     </text>
   </g>
