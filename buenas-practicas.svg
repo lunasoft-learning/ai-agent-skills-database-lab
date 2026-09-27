@@ -1,0 +1,339 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" style="background-color: #0b0f19; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-glow-1" cx="20%" cy="15%" r="40%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg-glow-2" cx="80%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Card Accents -->
+    <linearGradient id="card-glow-cyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="card-glow-emerald" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="card-glow-purple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="card-glow-amber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Border Gradients -->
+    <linearGradient id="border-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="border-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="border-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="border-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glow-subtle" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Background Canvas -->
+  <rect width="1920" height="1080" fill="#0b0f19"/>
+  <rect width="1920" height="1080" fill="url(#bg-glow-1)"/>
+  <rect width="1920" height="1080" fill="url(#bg-glow-2)"/>
+
+  <!-- Subtle Grid Lines -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="210" x2="1920" y2="210"/>
+    <line x1="0" y1="990" x2="1920" y2="990"/>
+    <line x1="500" y1="0" x2="500" y2="1080"/>
+    <line x1="960" y1="0" x2="960" y2="1080"/>
+    <line x1="1420" y1="0" x2="1420" y2="1080"/>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- HEADER SECTION                                                            -->
+  <!-- ========================================================================= -->
+  <g transform="translate(960, 50)" text-anchor="middle">
+    <!-- Top Pill Badge -->
+    <rect x="-180" y="0" width="360" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="0" y="22" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="2">GOBERNANZA &amp; ARQUITECTURA DE IA</text>
+
+    <!-- Main Title -->
+    <text x="0" y="78" fill="#f8fafc" font-size="44" font-weight="800" letter-spacing="-0.5">Las 4 Reglas de Oro para tus Agent Skills</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="118" fill="#94a3b8" font-size="19" font-weight="400">
+      Principios indispensables para diseñar habilidades fiables, atómicas y listas para producción
+    </text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CARD 1: ATOMICIDAD                                                        -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 220)">
+    <!-- Base Card -->
+    <rect width="420" height="740" rx="20" fill="#111827" stroke="url(#border-cyan)" stroke-width="1.5"/>
+    <rect width="420" height="220" rx="20" fill="url(#card-glow-cyan)"/>
+
+    <!-- Header Badge & Icon -->
+    <g transform="translate(32, 32)">
+      <rect width="56" height="56" rx="14" fill="#0f2942" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- Icon: Modular Blocks -->
+      <path d="M19 28 L28 23 L37 28 L28 33 Z M19 33 L28 38 L37 33 M19 38 L28 43 L37 38" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <rect x="290" y="8" width="62" height="32" rx="16" fill="#0f2942" stroke="#38bdf8" stroke-width="1"/>
+      <text x="321" y="29" fill="#38bdf8" font-size="15" font-weight="800" text-anchor="middle">01</text>
+    </g>
+
+    <!-- Title & Tagline -->
+    <text x="32" y="132" fill="#f8fafc" font-size="26" font-weight="700">Atomicidad</text>
+    <text x="32" y="160" fill="#38bdf8" font-size="15" font-weight="600">Un skill = Un problema delimitado</text>
+
+    <!-- Separator -->
+    <line x1="32" y1="184" x2="388" y2="184" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Content: Principios -->
+    <text x="32" y="222" fill="#cbd5e1" font-size="14" font-weight="700" letter-spacing="1">PRINCIPIOS CLAVE</text>
+    
+    <!-- Bullet 1 -->
+    <circle cx="42" cy="256" r="4" fill="#38bdf8"/>
+    <text x="58" y="261" fill="#e2e8f0" font-size="15" font-weight="600">Evita los mega-skills</text>
+    <text x="58" y="284" fill="#94a3b8" font-size="13.5">No mezcles exploración, optimización</text>
+    <text x="58" y="304" fill="#94a3b8" font-size="13.5">y documentación en un archivo único.</text>
+
+    <!-- Bullet 2 -->
+    <circle cx="42" cy="344" r="4" fill="#38bdf8"/>
+    <text x="58" y="349" fill="#e2e8f0" font-size="15" font-weight="600">Especialización de rol</text>
+    <text x="58" y="372" fill="#94a3b8" font-size="13.5">Tres skills pequeños son más precisos</text>
+    <text x="58" y="392" fill="#94a3b8" font-size="13.5">y predecibles que un prompt gigante.</text>
+
+    <!-- Bullet 3 -->
+    <circle cx="42" cy="432" r="4" fill="#38bdf8"/>
+    <text x="58" y="437" fill="#e2e8f0" font-size="15" font-weight="600">Composición orquestada</text>
+    <text x="58" y="460" fill="#94a3b8" font-size="13.5">Permite que un agente líder coordine</text>
+    <text x="58" y="480" fill="#94a3b8" font-size="13.5">subagentes con tareas aisladas.</text>
+
+    <!-- Practical Case Box -->
+    <rect x="32" y="525" width="356" height="125" rx="12" fill="#0c1929" stroke="#1e3a5f" stroke-width="1"/>
+    <text x="48" y="553" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="1">EN ESTE PROYECTO</text>
+    <text x="48" y="582" fill="#e2e8f0" font-size="13.5">• <tspan font-family="monospace" fill="#7dd3fc">schema-exploration</tspan></text>
+    <text x="48" y="608" fill="#e2e8f0" font-size="13.5">• <tspan font-family="monospace" fill="#7dd3fc">sql-query-optimizer</tspan></text>
+    <text x="48" y="634" fill="#e2e8f0" font-size="13.5">• <tspan font-family="monospace" fill="#7dd3fc">db-schema-documenter</tspan></text>
+
+    <!-- Footer Takeaway Pill -->
+    <rect x="32" y="675" width="356" height="40" rx="10" fill="#0f2942"/>
+    <text x="210" y="700" fill="#7dd3fc" font-size="13" font-weight="600" text-anchor="middle">🎯 Modularidad e independencia</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CARD 2: BLINDAJE & GUARDARRAÍLES                                         -->
+  <!-- ========================================================================= -->
+  <g transform="translate(520, 220)">
+    <!-- Base Card -->
+    <rect width="420" height="740" rx="20" fill="#111827" stroke="url(#border-emerald)" stroke-width="1.5"/>
+    <rect width="420" height="220" rx="20" fill="url(#card-glow-emerald)"/>
+
+    <!-- Header Badge & Icon -->
+    <g transform="translate(32, 32)">
+      <rect width="56" height="56" rx="14" fill="#0d2b1f" stroke="#10b981" stroke-width="1.5"/>
+      <!-- Icon: Shield Check -->
+      <path d="M28 20 L38 24 V33 C38 40 28 45 28 45 C28 45 18 40 18 33 V24 Z" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M24 33 L27 36 L33 30" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="290" y="8" width="62" height="32" rx="16" fill="#0d2b1f" stroke="#10b981" stroke-width="1"/>
+      <text x="321" y="29" fill="#10b981" font-size="15" font-weight="800" text-anchor="middle">02</text>
+    </g>
+
+    <!-- Title & Tagline -->
+    <text x="32" y="132" fill="#f8fafc" font-size="26" font-weight="700">Guardarraíles</text>
+    <text x="32" y="160" fill="#10b981" font-size="15" font-weight="600">Seguridad preventiva innegociable</text>
+
+    <!-- Separator -->
+    <line x1="32" y1="184" x2="388" y2="184" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Content: Principios -->
+    <text x="32" y="222" fill="#cbd5e1" font-size="14" font-weight="700" letter-spacing="1">PRINCIPIOS CLAVE</text>
+
+    <!-- Bullet 1 -->
+    <circle cx="42" cy="256" r="4" fill="#10b981"/>
+    <text x="58" y="261" fill="#e2e8f0" font-size="15" font-weight="600">Filtros obligatorios</text>
+    <text x="58" y="284" fill="#94a3b8" font-size="13.5">Prohíbe terminantemente UPDATE o</text>
+    <text x="58" y="304" fill="#94a3b8" font-size="13.5">DELETE masivos sin cláusula WHERE.</text>
+
+    <!-- Bullet 2 -->
+    <circle cx="42" cy="344" r="4" fill="#10b981"/>
+    <text x="58" y="349" fill="#e2e8f0" font-size="15" font-weight="600">Confirmación humana interactiva</text>
+    <text x="58" y="372" fill="#94a3b8" font-size="13.5">Exige confirmación explícita ante</text>
+    <text x="58" y="392" fill="#94a3b8" font-size="13.5">comandos DDL (DROP, TRUNCATE, ALTER).</text>
+
+    <!-- Bullet 3 -->
+    <circle cx="42" cy="432" r="4" fill="#10b981"/>
+    <text x="58" y="437" fill="#e2e8f0" font-size="15" font-weight="600">Filosofía Human-in-the-Loop</text>
+    <text x="58" y="460" fill="#94a3b8" font-size="13.5">El agente analiza y propone el cambio;</text>
+    <text x="58" y="480" fill="#94a3b8" font-size="13.5">tú tienes siempre el control final.</text>
+
+    <!-- Practical Case Box -->
+    <rect x="32" y="525" width="356" height="125" rx="12" fill="#082117" stroke="#164e39" stroke-width="1"/>
+    <text x="48" y="553" fill="#10b981" font-size="12" font-weight="700" letter-spacing="1">EN ESTE PROYECTO</text>
+    <text x="48" y="582" fill="#e2e8f0" font-size="13.5">• <tspan font-family="monospace" fill="#6ee7b7">sql-safety-guardrails</tspan></text>
+    <text x="48" y="608" fill="#e2e8f0" font-size="13.5">• Bloqueo ante DDL destructivo</text>
+    <text x="48" y="634" fill="#e2e8f0" font-size="13.5">• Comprobación <tspan font-family="monospace" fill="#6ee7b7">IF NOT EXISTS</tspan> en índices</text>
+
+    <!-- Footer Takeaway Pill -->
+    <rect x="32" y="675" width="356" height="40" rx="10" fill="#0d2b1f"/>
+    <text x="210" y="700" fill="#6ee7b7" font-size="13" font-weight="600" text-anchor="middle">🛡️ Defensa en profundidad</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CARD 3: AISLAMIENTO DE SECRETOS                                          -->
+  <!-- ========================================================================= -->
+  <g transform="translate(980, 220)">
+    <!-- Base Card -->
+    <rect width="420" height="740" rx="20" fill="#111827" stroke="url(#border-purple)" stroke-width="1.5"/>
+    <rect width="420" height="220" rx="20" fill="url(#card-glow-purple)"/>
+
+    <!-- Header Badge & Icon -->
+    <g transform="translate(32, 32)">
+      <rect width="56" height="56" rx="14" fill="#28113d" stroke="#a855f7" stroke-width="1.5"/>
+      <!-- Icon: Lock -->
+      <rect x="20" y="27" width="16" height="14" rx="3" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+      <path d="M23 27 V23 C23 20.2 25.2 18 28 18 C30.8 18 33 20.2 33 23 V27" fill="none" stroke="#a855f7" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="28" cy="34" r="1.5" fill="#a855f7"/>
+
+      <rect x="290" y="8" width="62" height="32" rx="16" fill="#28113d" stroke="#a855f7" stroke-width="1"/>
+      <text x="321" y="29" fill="#a855f7" font-size="15" font-weight="800" text-anchor="middle">03</text>
+    </g>
+
+    <!-- Title & Tagline -->
+    <text x="32" y="132" fill="#f8fafc" font-size="26" font-weight="700">Aislamiento</text>
+    <text x="32" y="160" fill="#a855f7" font-size="15" font-weight="600">Cero credenciales en el repositorio</text>
+
+    <!-- Separator -->
+    <line x1="32" y1="184" x2="388" y2="184" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Content: Principios -->
+    <text x="32" y="222" fill="#cbd5e1" font-size="14" font-weight="700" letter-spacing="1">PRINCIPIOS CLAVE</text>
+
+    <!-- Bullet 1 -->
+    <circle cx="42" cy="256" r="4" fill="#a855f7"/>
+    <text x="58" y="261" fill="#e2e8f0" font-size="15" font-weight="600">Variables de entorno</text>
+    <text x="58" y="284" fill="#94a3b8" font-size="13.5">Puertos, usuarios y contraseñas</text>
+    <text x="58" y="304" fill="#94a3b8" font-size="13.5">viven en <tspan font-family="monospace" fill="#c084fc">.env</tspan>, nunca en el código.</text>
+
+    <!-- Bullet 2 -->
+    <circle cx="42" cy="344" r="4" fill="#a855f7"/>
+    <text x="58" y="349" fill="#e2e8f0" font-size="15" font-weight="600">.gitignore estricto</text>
+    <text x="58" y="372" fill="#94a3b8" font-size="13.5">Ignora credenciales, logs de sesión,</text>
+    <text x="58" y="392" fill="#94a3b8" font-size="13.5">volúmenes Docker y ficheros temporales.</text>
+
+    <!-- Bullet 3 -->
+    <circle cx="42" cy="432" r="4" fill="#a855f7"/>
+    <text x="58" y="437" fill="#e2e8f0" font-size="15" font-weight="600">Plantillas seguras</text>
+    <text x="58" y="460" fill="#94a3b8" font-size="13.5">Publica <tspan font-family="monospace" fill="#c084fc">.env.example</tspan> con valores</text>
+    <text x="58" y="480" fill="#94a3b8" font-size="13.5">ficticios para guiar al equipo.</text>
+
+    <!-- Practical Case Box -->
+    <rect x="32" y="525" width="356" height="125" rx="12" fill="#1e0f2e" stroke="#4a1d75" stroke-width="1"/>
+    <text x="48" y="553" fill="#a855f7" font-size="12" font-weight="700" letter-spacing="1">EN ESTE PROYECTO</text>
+    <text x="48" y="582" fill="#e2e8f0" font-size="13.5">• <tspan font-family="monospace" fill="#d8b4fe">.env.example</tspan> documentado</text>
+    <text x="48" y="608" fill="#e2e8f0" font-size="13.5">• Parámetros en <tspan font-family="monospace" fill="#d8b4fe">docker-compose.yml</tspan></text>
+    <text x="48" y="634" fill="#e2e8f0" font-size="13.5">• Cadenas de conexión aisladas</text>
+
+    <!-- Footer Takeaway Pill -->
+    <rect x="32" y="675" width="356" height="40" rx="10" fill="#28113d"/>
+    <text x="210" y="700" fill="#d8b4fe" font-size="13" font-weight="600" text-anchor="middle">🔐 Privacidad y gobierno</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CARD 4: HERRAMIENTAS DE CATÁLOGO                                         -->
+  <!-- ========================================================================= -->
+  <g transform="translate(1440, 220)">
+    <!-- Base Card -->
+    <rect width="420" height="740" rx="20" fill="#111827" stroke="url(#border-amber)" stroke-width="1.5"/>
+    <rect width="420" height="220" rx="20" fill="url(#card-glow-amber)"/>
+
+    <!-- Header Badge & Icon -->
+    <g transform="translate(32, 32)">
+      <rect width="56" height="56" rx="14" fill="#301f07" stroke="#f59e0b" stroke-width="1.5"/>
+      <!-- Icon: Search / Terminal Data -->
+      <circle cx="26" cy="27" r="7" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+      <line x1="31.5" y1="32.5" x2="38" y2="39" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M19 39 H24" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+
+      <rect x="290" y="8" width="62" height="32" rx="16" fill="#301f07" stroke="#f59e0b" stroke-width="1"/>
+      <text x="321" y="29" fill="#f59e0b" font-size="15" font-weight="800" text-anchor="middle">04</text>
+    </g>
+
+    <!-- Title & Tagline -->
+    <text x="32" y="132" fill="#f8fafc" font-size="26" font-weight="700">Herramientas</text>
+    <text x="32" y="160" fill="#f59e0b" font-size="15" font-weight="600">Principio explore-first y catálogos</text>
+
+    <!-- Separator -->
+    <line x1="32" y1="184" x2="388" y2="184" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Content: Principios -->
+    <text x="32" y="222" fill="#cbd5e1" font-size="14" font-weight="700" letter-spacing="1">PRINCIPIOS CLAVE</text>
+
+    <!-- Bullet 1 -->
+    <circle cx="42" cy="256" r="4" fill="#f59e0b"/>
+    <text x="58" y="261" fill="#e2e8f0" font-size="15" font-weight="600">Scripts de apoyo ligeros</text>
+    <text x="58" y="284" fill="#94a3b8" font-size="13.5">Proporciona utilidades CLI que lean</text>
+    <text x="58" y="304" fill="#94a3b8" font-size="13.5">el catálogo real de SQL Server.</text>
+
+    <!-- Bullet 2 -->
+    <circle cx="42" cy="344" r="4" fill="#f59e0b"/>
+    <text x="58" y="349" fill="#e2e8f0" font-size="15" font-weight="600">Ahorro drástico de contexto</text>
+    <text x="58" y="372" fill="#94a3b8" font-size="13.5">No pegues esquemas masivos en el prompt;</text>
+    <text x="58" y="392" fill="#94a3b8" font-size="13.5">deja que el agente consulte bajo demanda.</text>
+
+    <!-- Bullet 3 -->
+    <circle cx="42" cy="432" r="4" fill="#f59e0b"/>
+    <text x="58" y="437" fill="#e2e8f0" font-size="15" font-weight="600">Cero alucinaciones de esquema</text>
+    <text x="58" y="460" fill="#94a3b8" font-size="13.5">Basarse en metadatos reales garantiza</text>
+    <text x="58" y="480" fill="#94a3b8" font-size="13.5">índices y DDL correctos a la primera.</text>
+
+    <!-- Practical Case Box -->
+    <rect x="32" y="525" width="356" height="125" rx="12" fill="#241604" stroke="#5c3809" stroke-width="1"/>
+    <text x="48" y="553" fill="#f59e0b" font-size="12" font-weight="700" letter-spacing="1">EN ESTE PROYECTO</text>
+    <text x="48" y="582" fill="#e2e8f0" font-size="13.5">• <tspan font-family="monospace" fill="#fde68a">scripts/schema_explorer.py</tspan></text>
+    <text x="48" y="608" fill="#e2e8f0" font-size="13.5">• Consultas a <tspan font-family="monospace" fill="#fde68a">sys.tables</tspan> y <tspan font-family="monospace" fill="#fde68a">sys.indexes</tspan></text>
+    <text x="48" y="634" fill="#e2e8f0" font-size="13.5">• Diagramas <tspan font-family="monospace" fill="#fde68a">erDiagram</tspan> en Mermaid</text>
+
+    <!-- Footer Takeaway Pill -->
+    <rect x="32" y="675" width="356" height="40" rx="10" fill="#301f07"/>
+    <text x="210" y="700" fill="#fde68a" font-size="13" font-weight="600" text-anchor="middle">⚡ Verdad técnica demostrable</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER BAR                                                                -->
+  <!-- ========================================================================= -->
+  <g transform="translate(960, 1025)" text-anchor="middle">
+    <line x1="-900" y1="-15" x2="900" y2="-15" stroke="#1e293b" stroke-width="1"/>
+    <text x="0" y="10" fill="#64748b" font-size="14" font-weight="500">
+      Curso: <tspan fill="#94a3b8" font-weight="600">AI agent skills para bases de datos</tspan> &nbsp;•&nbsp; 
+      Instructor: <tspan fill="#94a3b8" font-weight="600">Juanjo Luna</tspan> &nbsp;•&nbsp; 
+      Repositorio: <tspan fill="#38bdf8" font-weight="600">github.com/lunasoft-learning/ai-agent-skills-database-lab</tspan>
+    </text>
+  </g>
+</svg>
